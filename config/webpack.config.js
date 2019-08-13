@@ -23,8 +23,8 @@ const getClientEnvironment = require("./env");
 const ModuleNotFoundPlugin = require("react-dev-utils/ModuleNotFoundPlugin");
 const ForkTsCheckerWebpackPlugin = require("react-dev-utils/ForkTsCheckerWebpackPlugin");
 const typescriptFormatter = require("react-dev-utils/typescriptFormatter");
-
 const postcssNormalize = require("postcss-normalize");
+const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 const appPackageJson = require(paths.appPackageJson);
 
@@ -277,6 +277,10 @@ module.exports = function(webpackEnv) {
         "react-native": "react-native-web",
       },
       plugins: [
+        new TsconfigPathsPlugin({
+          extensions: [".js", ".ts", ".jsx", ".tsx"],
+          /* options: see below */
+        }),
         // Adds support for installing with Plug'n'Play, leading to faster installs and adding
         // guards against forgotten dependencies and such.
         PnpWebpackPlugin,
