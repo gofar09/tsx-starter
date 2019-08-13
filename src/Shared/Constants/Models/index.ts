@@ -1,0 +1,1 @@
+export const SESSION_STORE = "SESSION_STORE";

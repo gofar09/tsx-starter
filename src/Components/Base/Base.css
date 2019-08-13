@@ -1,14 +1,14 @@
-.App {
+.Base {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
+.Base-logo {
+  animation: Base-logo-spin infinite 20s linear;
   height: 10vmin;
   pointer-events: none;
 }
 
-.App-header {
+.Base-header {
   background-color: #282c34;
   min-height: 5vh;
   display: flex;
@@ -19,11 +19,11 @@
   color: white;
 }
 
-.App-link {
+.Base-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+@keyframes Base-logo-spin {
   from {
     transform: rotate(0deg);
   }
